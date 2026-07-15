@@ -1,0 +1,13 @@
+= Project State
+
+Phase: 4 - Completion
+
+Current Status:
+* .NET SDK 8 installed.
+* Notification Gatekeeper application written, compiled, and registered.
+* Walkthrough artifact generated for final user setup.
+* Command-line and batch script created for easy on/off toggling of the background app and registry settings.
+* Project successfully completed.
+
+Next Steps:
+* None. (User to manually enable Developer Mode and test the app).

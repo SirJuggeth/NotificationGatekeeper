@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap rescap uap5">
+
+  <Identity
+    Name="NotificationGatekeeper"
+    Publisher="CN=NotificationGatekeeper"
+    Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>Notification Gatekeeper</DisplayName>
+    <PublisherDisplayName>NotificationGatekeeper</PublisherDisplayName>
+    <Logo>Images\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.19041.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="EN-US" />
+  </Resources>
+
+  <Applications>
+    <Application
+      Id="App"
+      Executable="NotificationGatekeeper.exe"
+      EntryPoint="NotificationGatekeeper.exe">
+      <uap:VisualElements
+        DisplayName="Notification Gatekeeper"
+        Description="Notification Gatekeeper"
+        BackgroundColor="transparent"
+        Square150x150Logo="Images\Square150x150Logo.png"
+        Square44x44Logo="Images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Images\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap5:Extension Category="windows.startupTask">
+          <uap5:StartupTask TaskId="NotificationGatekeeperStartup" Enabled="true" DisplayName="Notification Gatekeeper" />
+        </uap5:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <uap:Capability Name="userNotificationListener" />
+  </Capabilities>
+</Package>

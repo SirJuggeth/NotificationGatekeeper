@@ -1,0 +1,12 @@
+= Decision Log
+
+This document tracks all major architectural, strategic, or rule-modification decisions, as well as executed implementation plans.
+
+* [2026-07-15] Decided to create a PowerShell/Batch script toggle instead of a UI tray app to quickly fulfill the user's request for an easy on/off switch for the gatekeeper and registry settings.
+
+* [2026-07-15] Decided to use a continuous fixed-interval timer aligned to the clock (e.g., 12:00, 12:05) rather than an event-driven timer for batching. This ensures predictable notification deliveries.
+* [2026-07-15] Decided to use an MSIX packaged C# application targeting the Windows 10/11 `UserNotificationListener` API, as it is the only native way to read and delete system notifications programmatically.
+* [2026-07-15] Added local text-based logging to audit intercepted notifications for troubleshooting counts.
+* [2026-07-15] Included `windows.startupTask` in the MSIX manifest to allow the application to launch automatically upon Windows boot.
+
+* [2026-07-15] Received user approval to proceed with the updated implementation plan. Transitioning to Execution Phase.
