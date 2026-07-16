@@ -1,0 +1,13 @@
+= Backlog
+
+This document tracks all future features, bugs, and ideas for the Notification Gatekeeper project.
+
+== Unsorted
+* None.
+
+== Todo
+* None.
+
+== Icebox
+* System Tray UI: Consider building a visual system tray icon with a right-click context menu to pause/resume the gatekeeper, replacing the need for the PowerShell toggle script.
+* Dynamic Configuration: Move the target app list and interval timer length from hardcoded variables in `Program.cs` to an external JSON or XML config file so the user can change them without recompiling.
